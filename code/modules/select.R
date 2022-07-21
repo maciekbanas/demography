@@ -14,7 +14,7 @@ selectServer <- function(id, r) {
       output$selectCountryInput <- renderUI({
         
         selectInput(session$ns("selectCountry"), "Select country: ",
-                    unique(r$dataTotalFertilityRate$country))
+                    unique(r$dataTotalFertilityRate$geo))
         
       })
       
@@ -23,6 +23,19 @@ selectServer <- function(id, r) {
         r$selectedCountry <- input$selectCountry
         
       })
+      
+      # output$selectAgeInput <- renderUI({
+      #   
+      #   selectInput(session$ns("selectAge"), "Select age: ",
+      #               unique(r$dataTotalFertilityRate$age))
+      #   
+      # })
+      # 
+      # observeEvent(input$selectAge, {
+      #   
+      #   r$selectedAge <- input$selectAge
+      #   
+      # })
       
     }
   )

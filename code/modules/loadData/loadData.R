@@ -11,11 +11,10 @@ loadDataServer <- function(id, r) {
     function(input, output, session) {
       
       observe({
-        TotalFertilityRateid <- "tgs00100"
+        TotalFertilityRateid <- "tps00199"
         dataTotalFertilityRate <- eurostat::get_eurostat(TotalFertilityRateid) %>% data.table()
-        dataTotalFertilityRate[, country := substr(geo,1,2)]
         r$dataTotalFertilityRate <- dataTotalFertilityRate
-          
+        # browser()  
       })
       
     }

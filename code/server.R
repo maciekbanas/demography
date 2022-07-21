@@ -8,6 +8,7 @@ server <- function(input, output, session) {
   r <- reactiveValues()
   
   loadDataServer("loadData", r)
+  plotsServer("plotTFR", r)
   tablesServer("tableTFR", r)
   selectServer("selectTFR", r)
   

@@ -8,6 +8,7 @@ ui <- semanticPage(
   title = "Demographic processes",
   
   selectUI("selectTFR"),
+  plotsUI("plotTFR"),
   tablesUI("tableTFR")
             
            

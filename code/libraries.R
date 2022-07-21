@@ -7,3 +7,5 @@ library(dplyr)
 library(purrr)
 library(magrittr)
 library(data.table)
+
+library(echarts4r)

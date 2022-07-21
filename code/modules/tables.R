@@ -12,7 +12,7 @@ tablesServer <- function(id, r) {
       
       output$table <- renderTable({
         req(r$dataTotalFertilityRate)
-        r$dataTotalFertilityRate %>% filter(country == .env$r$selectedCountry)
+        r$dataTotalFertilityRate %>% filter(geo == .env$r$selectedCountry)
       })
     }
   )
